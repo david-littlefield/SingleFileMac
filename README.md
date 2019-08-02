@@ -5,7 +5,7 @@ This MacOS application was made possible thanks to the support of **@gildas-lorm
 A MacOS application that demonstrates using the SingleFile repository, written in Swift. 
 * Coverts JavaScript files to Swift compatible files 
 * Customizes options to download websites
-* Evaluates JavaScript in browser
+* Executes scripts in browser
 * Downloads website html
 
 ## Download
