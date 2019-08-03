@@ -16,12 +16,12 @@ class Divider: NSView {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.setupView()
+        setupView()
     }
     
     private func setupView() {
-        self.layer?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
-        self.wantsLayer = true
+        layer?.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)
+        wantsLayer = true
     }
 }
 

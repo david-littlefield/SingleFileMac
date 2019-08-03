@@ -73,8 +73,8 @@ extension WebViewController: NSAlertDelegate {
             if let singlefileSource = try? String(contentsOf: singlefilePath, encoding: .utf8),
                 let librarySource = try? String(contentsOf: libraryPath, encoding: .utf8),
                 let optionsSource = try? String(contentsOf: optionsPath, encoding: .utf8) {
-                let libraryScript = WKUserScript(source: librarySource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-                let optionsScript = WKUserScript(source: optionsSource, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+                let libraryScript = WKUserScript(source: librarySource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
+                let optionsScript = WKUserScript(source: optionsSource, injectionTime: .atDocumentStart, forMainFrameOnly: false)
                 let singlefileScript = WKUserScript(source: singlefileSource, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
                 let userContentController = webView.configuration.userContentController
                 userContentController.removeAllUserScripts()

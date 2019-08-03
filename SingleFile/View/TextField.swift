@@ -16,15 +16,15 @@ class TextField: NSTextField {
     
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
-        self.setupTextField()
+        setupTextField()
     }
     
     private func setupTextField() {
-        self.backgroundColor = .unemphasizedSelectedContentBackgroundColor
-        self.textColor = .secondaryLabelColor
-        self.font = NSFont(name: "Arial", size: 15.0)
-        self.layer?.cornerRadius = 5.0
-        self.wantsLayer = true
+        backgroundColor = .unemphasizedSelectedContentBackgroundColor
+        textColor = .secondaryLabelColor
+        font = NSFont(name: "Arial", size: 15.0)
+        layer?.cornerRadius = 5.0
+        wantsLayer = true
     }
 }
 

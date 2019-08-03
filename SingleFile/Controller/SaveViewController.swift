@@ -166,7 +166,7 @@ extension SaveViewController {
         displayTextFieldBorder(false)
         saveHtmlButton.isEnabled = false
         showProgressIndicator(true)
-        var url = urlTextField.stringValue
+        var url = urlTextField.stringValue.trimmingCharacters(in: .whitespaces)
         url = url.contains("://") ? url : "https://" + url
         urlTextField.stringValue = url
         if let url = URL(string: url) {
