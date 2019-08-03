@@ -56,6 +56,7 @@ extension WebViewController: NSAlertDelegate {
     private func setupUserContentController() {
         let userContentController = webView.configuration.userContentController
         userContentController.removeScriptMessageHandler(forName: "websiteHasBeenSaved")
+        userContentController.removeScriptMessageHandler(forName: "performHttpRequest")
         userContentController.add(self, name: "websiteHasBeenSaved")
         userContentController.add(self, name: "performHttpRequest")
     }
