@@ -604,17 +604,18 @@ extension FileViewController {
             let bracketEndComma = "},"
             let callback = """
             callbackFetch: message => {
-                const pendingMessage = pendingMessages.get(message.url);
-                if (pendingMessage) {
+                const callbacks = pendingMessages.get(message.url);
+                if (callbacks) {
                     pendingMessages.delete(message.url);
                     if (message.error) {
-                        pendingMessage.reject(message.error);
+                        callbacks.forEach(callback => callback.reject(message.error));
                     } else {
-                        pendingMessage.resolve({
+                        const data = {
                             status: message.status,
                             headers: { get: name => message.headers[name] },
                             arrayBuffer: async () => new Uint8Array(message.body).buffer
-                        });
+                        };
+                        callbacks.forEach(callback => callback.resolve(data));
                     }
                 }
             }
@@ -624,7 +625,12 @@ extension FileViewController {
             function nativeFetch(url) {
                 return new Promise((resolve, reject) => {
                     webkit.messageHandlers.performHttpRequest.postMessage(url);
-                    pendingMessages.set(url, { resolve, reject });
+                    let callbacks = pendingMessages.get(url);
+                    if (!callbacks) {
+                        callbacks = [];
+                        pendingMessages.set(url, callbacks);
+                    }
+                    callbacks.push({ resolve, reject });
                 });
             }
             """
