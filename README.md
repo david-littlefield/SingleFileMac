@@ -1,20 +1,20 @@
-# SingleFileMacOS
-This MacOS application was made possible thanks to the support of **@gildas-lormeau**, [SingleFile](https://github.com/gildas-lormeau/SingleFile/blob/master/cli/README.MD) creator.</br>
+# SingleFileMac
+This Mac application was made possible thanks to the support of **@gildas-lormeau**, [SingleFile](https://github.com/gildas-lormeau/SingleFile/blob/master/cli/README.MD) creator.</br>
 
 ## Features
-A MacOS application that demonstrates using the SingleFile repository, written in Swift. 
+A Mac application that uses the SingleFile repository. 
 * Coverts JavaScript files to Swift compatible files 
 * Customizes options to download websites
 * Executes scripts in browser
 * Downloads website html
 
 ## Download
-MacOS Application: [Download](https://github.com/captaindavepdx/SingleFileMacOS/raw/master/SingleFile.zip)</br>
+Mac Application: [Download](https://github.com/david-littlefield/SingleFileMac/raw/master/SingleFile.zip)</br>
 SingleFile-master: [Download](https://github.com/gildas-lormeau/SingleFile/archive/master.zip)
 
 
 ## Setup
-1. Download "MacOS Application"
+1. Download "Mac Application"
 2. Download "SingleFile-master"
 3. Unzip files
 4. Open "SingleFile.app"
@@ -27,6 +27,6 @@ SingleFile-master: [Download](https://github.com/gildas-lormeau/SingleFile/archi
 
 #
 
-![Screenshot](https://raw.githubusercontent.com/captaindavepdx/SingleFileMacOS/master/Screenshot.png)</br>
+![Screenshot](https://raw.githubusercontent.com/david-littlefield/SingleFileMac/master/Screenshot.png)</br>
 
 #
